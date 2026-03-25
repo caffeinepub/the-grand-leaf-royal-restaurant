@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    /* Dark green #0B2A1F => oklch(0.22 0.06 155) */
+    --background: 0.97 0.02 90;
+    --foreground: 0.18 0.04 155;
+    --card: 1 0 0;
+    --card-foreground: 0.18 0.04 155;
+    --popover: 1 0 0;
+    --popover-foreground: 0.18 0.04 155;
+    /* gold #C9A24A => oklch(0.72 0.12 75) */
+    --primary: 0.72 0.12 75;
+    --primary-foreground: 0.18 0.04 155;
+    --secondary: 0.22 0.06 155;
+    --secondary-foreground: 0.97 0.02 90;
+    --muted: 0.92 0.02 90;
+    --muted-foreground: 0.45 0.04 155;
+    --accent: 0.72 0.12 75;
+    --accent-foreground: 0.18 0.04 155;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.85 0.04 75;
+    --input: 0.88 0.02 90;
+    --ring: 0.72 0.12 75;
+    --chart-1: 0.72 0.12 75;
+    --chart-2: 0.22 0.06 155;
+    --chart-3: 0.55 0.08 155;
+    --chart-4: 0.82 0.14 75;
+    --chart-5: 0.35 0.06 155;
+    --sidebar: 0.22 0.06 155;
+    --sidebar-foreground: 0.97 0.02 90;
+    --sidebar-primary: 0.72 0.12 75;
+    --sidebar-primary-foreground: 0.18 0.04 155;
+    --sidebar-accent: 0.3 0.06 155;
+    --sidebar-accent-foreground: 0.97 0.02 90;
+    --sidebar-border: 0.3 0.06 155;
+    --sidebar-ring: 0.72 0.12 75;
+
+    /* Custom palette */
+    --royal-green: 0.22 0.06 155;
+    --royal-gold: 0.72 0.12 75;
+    --royal-cream: 0.97 0.02 90;
+    --royal-dark-cream: 0.93 0.03 85;
+  }
+
+  .dark {
+    --background: 0.15 0.05 155;
+    --foreground: 0.97 0.02 90;
+    --card: 0.22 0.06 155;
+    --card-foreground: 0.97 0.02 90;
+    --popover: 0.18 0.05 155;
+    --popover-foreground: 0.97 0.02 90;
+    --primary: 0.72 0.12 75;
+    --primary-foreground: 0.15 0.05 155;
+    --secondary: 0.28 0.06 155;
+    --secondary-foreground: 0.97 0.02 90;
+    --muted: 0.28 0.06 155;
+    --muted-foreground: 0.7 0.04 90;
+    --accent: 0.72 0.12 75;
+    --accent-foreground: 0.15 0.05 155;
+    --destructive: 0.704 0.191 22.216;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.3 0.05 155;
+    --input: 0.28 0.06 155;
+    --ring: 0.72 0.12 75;
+    --sidebar: 0.15 0.05 155;
+    --sidebar-foreground: 0.97 0.02 90;
+    --sidebar-primary: 0.72 0.12 75;
+    --sidebar-primary-foreground: 0.15 0.05 155;
+    --sidebar-accent: 0.22 0.06 155;
+    --sidebar-accent-foreground: 0.97 0.02 90;
+    --sidebar-border: 0.3 0.05 155;
+    --sidebar-ring: 0.72 0.12 75;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+@layer components {
+  .font-cinzel {
+    font-family: "Cinzel", serif;
+  }
+  .font-playfair {
+    font-family: "Playfair Display", serif;
+  }
+  .font-poppins {
+    font-family: "Poppins", sans-serif;
+  }
+
+  .text-gold {
+    color: oklch(var(--royal-gold));
+  }
+  .bg-royal-green {
+    background-color: oklch(var(--royal-green));
+  }
+  .bg-royal-cream {
+    background-color: oklch(var(--royal-cream));
+  }
+  .border-gold {
+    border-color: oklch(var(--royal-gold));
+  }
+
+  .royal-section-dark {
+    background-color: oklch(var(--royal-green));
+    color: oklch(var(--royal-cream));
+  }
+
+  .royal-section-light {
+    background-color: oklch(var(--royal-cream));
+    color: oklch(var(--royal-green));
+  }
+
+  .btn-gold {
+    @apply font-cinzel font-semibold px-6 py-3 rounded transition-all duration-300;
+    background-color: oklch(var(--royal-gold));
+    color: oklch(var(--royal-green));
+  }
+  .btn-gold:hover {
+    background-color: oklch(0.8 0.14 75);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 20px oklch(var(--royal-gold) / 0.4);
+  }
+
+  .btn-ghost-gold {
+    @apply font-cinzel font-semibold px-6 py-3 rounded border-2 transition-all duration-300;
+    border-color: oklch(var(--royal-gold));
+    color: oklch(var(--royal-gold));
+    background: transparent;
+  }
+  .btn-ghost-gold:hover {
+    background-color: oklch(var(--royal-gold));
+    color: oklch(var(--royal-green));
+  }
+
+  .section-heading {
+    @apply font-cinzel font-bold uppercase tracking-widest;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300;
+  }
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px oklch(0 0 0 / 0.15);
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    color: #000;
+    background: #fff;
+  }
+  .print-invoice {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
