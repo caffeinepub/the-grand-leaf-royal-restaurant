@@ -40,7 +40,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           <a href="#hero" className="flex items-center gap-2 shrink-0">
             <img
-              src="/assets/uploads/img_20260225_065708-019d22ce-d07a-77ef-9df4-669876f95008-8.png"
+              src="/assets/generated/grand-leaf-logo-transparent.dim_200x200.png"
               alt="The Grand Leaf Logo"
               className="h-12 w-12 object-contain rounded-full"
             />

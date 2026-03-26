@@ -46,11 +46,6 @@ const galleryItems = [
     title: "I Love Kolli Hills - Bends",
     titleTamil: "கோள்ளி மலை வளைவு சாலை",
   },
-  {
-    image: "/assets/uploads/wlwg29-019d22ce-d264-7695-955c-90bc13adf78b-10.jpg",
-    title: "Arapaleeswarar Temple",
-    titleTamil: "அரபளீச்வரர் கோவில்",
-  },
 ];
 
 export default function GallerySection() {
